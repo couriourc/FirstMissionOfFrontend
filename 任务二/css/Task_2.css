@@ -1,0 +1,85 @@
+
+			body
+			{
+				overflow: auto;
+				width: 520px;
+				height: 520px;
+				display: grid;
+				grid-auto-rows: 200px auto 200px;
+				grid-template-columns: 200px auto 200px;
+				margin-top: 150px;
+				margin-left: 300px;
+			}
+			#OBA{
+				
+				width: 320px;
+				height: 200px;
+				background: url(../img/one.jpg) repeat;
+				grid-column: 1/1;
+				grid-row: 1/1;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+				
+				}
+			
+			#TBA{
+				width: 320px;
+				height: 190px;
+				background: url(../img/two.jpg) repeat;
+				grid-column: 3/3;
+				grid-row: 2/2;
+			
+				}
+				#Hf{font-size: 75px;}
+				#Sf{font-size: 24px;}
+				#right
+				{
+					width: 320px;
+					height: 190px;
+					grid-column: 1/2;
+					grid-row: 2/2;
+					background-color: #00FFFF;
+					display: flex;
+					flex-direction: row;
+					align-items: flex-start;
+					justify-content: center;}
+				#left
+				{	line-height: 30px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					width: 320px;
+					height: 200px;
+					grid-column: 3/3;
+					grid-row: 1/2;
+					background-color: #00FFFF;
+				}
+				#child{
+					line-height: 30px;
+					width: 12rem; 
+					height: 11.875rem; 
+					background-color: crimson;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+				}
+				button{
+					height: 30px;
+					width: 125px;
+					background-color: aliceblue;
+					border-width: thin;
+					border-color: red;
+					
+				}
+				#Rchild{
+					line-height: 3px;
+					width: 12rem; 
+					height: 11.875rem; 
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;}

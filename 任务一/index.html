@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>任务一</title>
+
+    <style type="text/css">
+        body {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0px 0px;
+            justify-content: center;
+        }
+        
+        table {
+            color: #333333;
+            font-size: 0.875rem;
+            width: 600px;
+            padding-top: 10px;
+            line-height: 40px;
+        }
+        
+        #button {
+            width: 100px;
+            height: 30px;
+            background-color: springgreen;
+            border-radius: 20%;
+            border: 4px;
+            color: white;
+            font-size: 16px;
+        }
+        
+        #button:hover {
+            width: 100px;
+            height: 30px;
+            background-color: brown;
+            border-radius: 20%;
+            border: 1px;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .input {
+            border-spacing: 20px 10px;
+            width: 300px;
+            height: 20px;
+        }
+        
+        textarea {
+            width: 295px;
+            vertical-align: top;
+            color: darkgrey;
+        }
+        
+        select {
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td valign="middle" onblur="check2()"><span style="color: red;">*</span>请填写您的姓名：</td>
+                <td><input class="input" name="name" /></td>
+            </tr>
+            <tr>
+                <td valign="middle"><span style="color: red;">*</span>请输入您的密码：</td>
+                <td><input class="input" type="password" /></td>
+            </tr>
+            <tr>
+                <td valign="middle"><span style="color: red;">*</span>请再次输入密码：</td>
+                <td><input class="input" type="password" /></td>
+            </tr>
+
+            <tr>
+                <td valign="middle"> 请选择性别：</td>
+                <td>
+                    <input type="radio" name="man" value="man" />男
+                    <input type="radio" name="man" value="woman" />女
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle"> 请输入年龄：</td>
+                <td><input class="input" name="birthday" />
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle"> 请输入生日：</td>
+                <td><input class="input" id="birthday" onblur="check()" /></td>
+                <td> <span style="color: red;" onchange="check()">格式："yyyy-mm-dd"</span></td>
+            </tr>
+            <tr>
+                <td valign="middle"> 请选择您的爱好：</td>
+                <td>
+                    <input type="radio" name="one_favourit" value="music" />音乐影视
+                    <input type="radio" name="two_favourit" value="tour" /> 外出旅游
+                    <input type="radio" name="three_favourit" value="talk" />社交活动
+                </td>
+            </tr>
+            <tr>
+                <td valign="middle"><span style="color: red;">*</span>请选择所在省市：</td>
+
+                <td>
+                    <select name="province">
+					<option value="deaftrt">请选择省市</option>
+					<option value="shanghai">上海</option>
+					<option value="sichuan">四川</option>
+					<option value="beijing">北京</option>		
+				</select></td>
+            </tr>
+            <tr>
+                <td valign="top">自我描述：</td>
+                <td><textarea rows="5">请填写其他任务....</textarea></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td style="margin-top: 40px; display: flex;align-items: center;justify-content: center;">
+
+                    <button id="button" value="form" formmethod="post"><strong> 提交信息</strong> </button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    <script type="text/javascript">
+        var reg = /\d{4}-\d{1,2}-\d{1,2}/;
+        var date = document.getElementById("birthday");
+
+        function check2() {
+            if (this.value != null) {
+                this.style.borderColor = "green";
+            }
+
+        }
+
+        function check() {
+            if (reg.test(date.value) == false) {
+                date.style.borderColor = "red";
+
+                console.log("记录中");
+            }
+        }
+
+        function rec() {
+            date.style.borderColor = "none";
+            console.log("记录中");
+        }
+    </script>
+</body>
+
+</html>

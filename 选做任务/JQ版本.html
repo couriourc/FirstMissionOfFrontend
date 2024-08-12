@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        
+        #rec {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 20%;
+            border: 5px solid;
+        }
+    </style>
+    <script src="js/jquery-3.5.1.js">
+    </script>
+    <script>
+        var direct;
+        var rect = document.getElementById("rec")
+        var
+            $("#one").keydown(function(event) {
+                confirm.log(event.keyCode);
+                direct = event.keyCode
+                switch (event.keyCode) {
+                    case 37:
+                        rect.style.left = left - 10 + "px";
+                        break;
+                    case 38:
+                        rect.style.top = top - 10 + 'px';
+                        break;
+                    case 39:
+                        rect.style.left = left + 10 + "px";
+                        break;
+                    case 40:
+                        rect.style.top = top + 10 + 'px';
+                        break;
+                    default:
+                        console.log(top);
+                }
+
+
+            })
+    </script>
+</head>
+
+<body id="one">
+    <div id="rec">
+
+    </div>
+</body>
+
+</html>
